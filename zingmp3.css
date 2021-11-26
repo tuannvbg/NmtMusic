@@ -27,6 +27,7 @@ h1{
 .red {
     color: rgb(245, 88, 88);
 }
+
 .logoo {
     display: flex;
     justify-content: space-evenly;
@@ -373,4 +374,124 @@ a{
 .BIGBANG:hover {
     /* transform: translateY(120%); */
     transform: rotateY(360deg) translate(30%, -150%);
+}
+
+.playlist-bar {
+    width: 100%;
+    background-color: #431f58;
+    align-items: center;
+    border-radius: 15px;
+}
+.music_info {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 200px;
+}
+.music_info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    left: 100px;
+    position: absolute;
+    animation: rotate_animation 3s linear infinite;
+    animation-play-state: paused;
+}
+.play .music_info img{ 
+    animation-play-state: running;
+} 
+@keyframes rotate_animation {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.about_music {
+    position: absolute;
+    left: -42.3px;
+    top: 170px;
+}
+.about_music i{
+    margin-left: 6px;
+}
+.about_music #title {
+    margin-bottom: 17px;
+    font-size: 19px;
+    display: none;
+}
+.about_music h5 {
+    font-weight: 500;
+    color: rgb(243, 243, 243);
+    transform: rotate(90deg);
+    background-color: rgb(14, 12, 12);
+    padding: 6px;
+    cursor: pointer;
+    transition: transform 1.5s;
+}
+.about_music h5:hover {
+    transform: translate(100%, 50%);
+    color: rgb(245, 245, 97);
+}
+.contain_progress_bar {
+    display: block;
+    position: absolute;
+    right: 50px;
+    border: #e0e0e0 2px dotted;
+    padding: 15px;
+}
+.process_bar {
+    display: flex;
+    align-items: center;
+    right: 400px;
+    margin-top: 25px;
+}
+.action_btn {
+    cursor: pointer;
+    font-size: 23px;
+    margin: 0 20px;
+}
+.action_btn:hover{ 
+    color: #c662ef;
+}
+.action_btn i {
+    font-weight: 200;
+}
+#play{ 
+    font-size: 35px;
+    padding-right: 8px;
+}
+.progress-include {
+    background-color: #fff;
+    height: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+#progress {
+    background-color: #fe8daa;
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.1s linear;
+}
+.total_list_songs {
+    margin: 10px 50px 20px 50px;
+}
+.list_items {
+    padding: 25px 50px 5px 50px;
+    font-weight: 400;
+    font-size: 20px;
+    cursor: pointer;
+    border-bottom: #c98a99 solid 1px;
+}
+.list_items:hover {
+    background-color: rgba(182, 178, 178, 0.452);
+    border-radius: 15px;
+    color: rgb(57, 243, 166);
+}
+.contain_list {
+    padding: 20px 0;
 }

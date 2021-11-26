@@ -18,15 +18,15 @@
                 <div>music</div>
             </span>
             <ul>
-                <li><a class="bar-items" href=""><i class="fas fa-music"></i>Cá Nhân</a</li>
-                <li><a class="bar-items" href=""><i class="fas fa-dice-d6"></i>Khám Phá</a</li>
-                <li><a class="bar-items" href=""><i class="fas fa-chart-line"></i>#NMT-BXH</a</li>
+                <li><a class="bar-items" href="#"><i class="fas fa-music"></i>Cá Nhân</a</li>
+                <li><a class="bar-items" href="#"><i class="fas fa-dice-d6"></i>Khám Phá</a</li>
+                <li><a class="bar-items" href="#"><i class="fas fa-chart-line"></i>#NMT-BXH</a</li>
             </ul>
             <div id="line"></div>
             <ul>
-                <li><a class="bar-items" href=""><i class="fas fa-holly-berry"></i>Thể Loại</a></li>
-                <li><a class="bar-items" href=""><i class="fas fa-play"></i>MV</a</li>
-                <li><a class="bar-items" href=""><i class="fab fa-playstation"></i>Thư Viện</a></li>
+                <li><a class="bar-items" href="#"><i class="fas fa-holly-berry"></i>Thể Loại</a></li>
+                <li><a class="bar-items" href="#"><i class="fas fa-play"></i>MV</a</li>
+                <li><a class="bar-items" href="#"><i class="fab fa-playstation"></i>Thư Viện</a></li>
             </ul>
         </div>
         
@@ -43,9 +43,9 @@
                     </div>
 
                     <div class="right_items">
-                        <a class="right_icon icon1" href=""><i class="fas fa-upload"></i><span class="tooltip1">Tải lên</span></a>
-                        <a class="right_icon icon2" href=""><i class="fas fa-cog"></i><span class="tooltip2">Cài đặt</span></a>
-                        <a href=""><img id="Me" src="./source/avt.jpg" alt=""></a>
+                        <a class="right_icon icon1" href="#"><i class="fas fa-upload"></i><span class="tooltip1">Tải lên</span></a>
+                        <a class="right_icon icon2" href="#"><i class="fas fa-cog"></i><span class="tooltip2">Cài đặt</span></a>
+                        <a href="#"><img id="Me" src="./source/avt.jpg" alt=""></a>
                     </div>
                 </div>
 
@@ -60,9 +60,8 @@
             <div class="contain-choice">
                 <div class="Choice">
                     <ul>
-                        <!-- <li id="general"><a href="">Tổng quan</a></li> -->
                         <li id="songs"><a onclick="appearBaihat()" href="#">Bài hát</a></li>
-                        <li id="playlist"><a href="#">Playlist</a></li>
+                        <li id="playlist"><a onclick="appearPlaylist()" href="#">Playlist</a></li>
                         <li id="singers"><a onclick="appearNghesi()" href="#">Nghệ sĩ</a></li>
                     </ul>
                 </div>
@@ -75,8 +74,8 @@
                     </div>
                     <div class="col l-4">
                         <div class="function">
-                            <a href=""><i class="fas fa-upload"></i>TẢI LÊN</a>
-                            <a id="function_play" href=""><i class="fas fa-play"></i>PHÁT TẤT CẢ</a>
+                            <a href="#"><i class="fas fa-upload"></i>TẢI LÊN</a>
+                            <a id="function_play" onclick="appearPlaylist()" href="#"><i class="fas fa-play"></i>PHÁT TẤT CẢ</a>
                         </div>
 
                     </div>
@@ -114,7 +113,7 @@
                                     <i class="fas fa-music"></i>
                                     <div class="img-icon">
                                         
-                                        <img src="./source/fxxkit.jpg" alt="">
+                                        <img src="./source/FxxkIt.jpg" alt="">
                                         <a class="btn" id="btn-fi" onclick="playfi()"><i class="fas fa-play"></i></a>
                                     </div>
                                     <div class="text-desc">
@@ -138,7 +137,7 @@
                                     <i class="fas fa-music"></i>
                                     <div class="img-icon">
                                         
-                                        <img src="./source/haru.jpg" alt="">
+                                        <img src="./source/HaruHaru.jpg" alt="">
                                         <a class="btn" id="btn-hh" onclick="playhh()"><i class="fas fa-play"></i></a>
                                     </div>
                                     <div class="text-desc">
@@ -257,6 +256,55 @@
             </div>
             </div>
 
+            <div style="display: none;" id="list">
+               <div class="grid wide">
+                   <div class="row">
+                       <div class="col l-6 l-o-3">
+                        <div class="playlist-bar">
+                            <div class="music_info">
+                                <div class="about_music">
+                                    <h4 id="title">Last Dance</h4>
+                                    <h5 class="logo_BB">Big Bang<i class="fas fa-crown"></i></h5>
+                                </div>
+                                
+                                <img id="cover" src="./source/lastdance.jpg" alt="">
+                                
+                                <div class="contain_progress_bar">
+                                    <div class="progress-include">
+                                        <div id="progress"></div>
+                                    </div>
+                                    <div class="process_bar">
+                                        <audio id="audio_music" style="display: none;" src="./source/LastDance.mp3"></audio>
+                        
+                                        <div id="prev" class="action_btn">
+                                            <i class="fas fa-step-backward"></i>
+                                        </div>
+                                        <div id="play" class="action_btn">
+                                            <i class="far fa-play-circle"></i>
+                                        </div>
+                                        <div id="next" class="action_btn">
+                                            <i class="fas fa-step-forward"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="total_list_songs">
+                                <div class="contain_list">
+                                    <h3 class="list_items">1. Last Dance</h3>
+                                    <h3 class="list_items">2. Fxxk It</h3>
+                                    <h3 class="list_items">3. Haru Haru</h3>
+                                    <h3 class="list_items">4. Blue</h3>
+                                    <h3 class="list_items">5. If You</h3>
+                                    <h3 class="list_items">6. Let's Not Fall In Love</h3>
+                                    <h3 class="list_items">7. Loser</h3>
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                   </div>
+               </div>
+            </div>
+
             <div style="display: none;" id="nghesi">
                 <div class="introduce">
                     <div class="grid wide">
@@ -284,120 +332,19 @@
             <audio id="blue" style="display: none;" src="./source/Blue.mp3" controls></audio>
             <audio id="haruharu" style="display: none;" src="./source/HaruHaru.mp3" controls></audio>
             <audio id="fxxkit" style="display: none;" src="./source/FxxkIt.mp3" controls></audio>
-            <audio id="lnfil" style="display: none;" src="./source/LNFILove.mp3" controls></audio>
+            <audio id="lnfil" style="display: none;" src="./source/LetNotFallInLove.mp3" controls></audio>
             <audio id="ifyou" style="display: none;" src="./source/IfYou.mp3" controls></audio>
             <audio id="loser" style="display: none;" src="./source/Loser.mp3" controls></audio>
             
+            
         </div>
+
+        
+
     </div>
 
-    <script>
-        var getE = document.querySelector('.logo-class');
-        setInterval(() => {
-            getE.classList.toggle('red');
-            
-        }, 1000);
+    <script src="zingmp3.js"></script>
 
-        var getA = document.querySelector('.BIGBANG');
-        setInterval(() => {
-            getA.classList.toggle('red');
-        }, 1000);
-        
-        function appearNghesi() {
-            document.getElementById('baihat').style.display = "none";
-            document.querySelector('#nghesi').style.display = "block";
-        }
-        function appearBaihat() {
-            document.getElementById('baihat').style.display = "block";
-            document.querySelector('#nghesi').style.display = "none";
-        }
-
-
-        var lastdance = document.querySelector('#lastdance');
-        var btnld = document.querySelector('#btn-ld'); 
-        function playld() {
-            if(lastdance.paused) {
-                lastdance.play();
-                btnld.innerHTML = '<i class="fas fa-pause"></i>';
-            } else {
-                lastdance.pause();
-                btnld.innerHTML = '<i class="fas fa-play"></i>';
-            }
-        }
-        
-        var blue = document.querySelector('#blue');
-        var btnbl = document.querySelector('#btn-bl'); 
-        function playbl() {
-            if(blue.paused) {
-                blue.play();
-                btnbl.innerHTML = '<i class="fas fa-pause"></i>';
-            } else {
-                blue.pause();
-                btnbl.innerHTML = '<i class="fas fa-play"></i>';
-            }
-        }
-
-        var haruharu = document.querySelector('#haruharu');
-        var btnhh = document.querySelector('#btn-hh'); 
-        function playhh() {
-            if(haruharu.paused) {
-                haruharu.play();
-                btnhh.innerHTML = '<i class="fas fa-pause"></i>';
-            } else {
-                haruharu.pause();
-                btnhh.innerHTML = '<i class="fas fa-play"></i>';
-            }
-        }
-
-        var fxxkit = document.querySelector('#fxxkit');
-        var btnfi = document.querySelector('#btn-fi'); 
-        function playfi() {
-            if(fxxkit.paused) {
-                fxxkit.play();
-                btnfi.innerHTML = '<i class="fas fa-pause"></i>';
-            } else {
-                fxxkit.pause();
-                btnfi.innerHTML = '<i class="fas fa-play"></i>';
-            }
-        }
-
-        var loser = document.querySelector('#loser');
-        var btnls = document.querySelector('#btn-ls'); 
-        function playls() {
-            if(loser.paused) {
-                loser.play();
-                btnls.innerHTML = '<i class="fas fa-pause"></i>';
-            } else {
-                loser.pause();
-                btnls.innerHTML = '<i class="fas fa-play"></i>';
-            }
-        }
-        
-        var lnfil = document.querySelector('#lnfil');
-        var btnlnfil = document.querySelector('#btn-lnfil'); 
-        function playlnfil() {
-            if(lnfil.paused) {
-                lnfil.play();
-                btnlnfil.innerHTML = '<i class="fas fa-pause"></i>';
-            } else {
-                lnfil.pause();
-                btnlnfil.innerHTML = '<i class="fas fa-play"></i>';
-            }
-        }
-        
-        var ifyou = document.querySelector('#ifyou');
-        var btniy = document.querySelector('#btn-iy'); 
-        function playiy() {
-            if(ifyou.paused) {
-                ifyou.play();
-                btniy.innerHTML = '<i class="fas fa-pause"></i>';
-            } else {
-                ifyou.pause();
-                btniy.innerHTML = '<i class="fas fa-play"></i>';
-            }
-        }
-
-        
-    </script>
+    
 </body>
 </html>
