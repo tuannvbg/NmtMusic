@@ -206,7 +206,7 @@ var title = document.querySelector('#title');
 var cover = document.querySelector('#cover');
 
 //title
-var songs = ['LastDance', 'Fit', 'HaruHaru', 'Blue', 'IfYou', 'LetNotFallInLove', 'Loser'];
+var songs = ['lastdance', 'Fit', 'HaruHaru', 'Blue', 'IfYou', 'LetNotFallInLove', 'Loser'];
 let songIndex = 0;
 
 loadsong(songs[songIndex]);
