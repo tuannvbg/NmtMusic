@@ -11,12 +11,13 @@ body{
     background-color: #221633;
 }
 .sidebar{
-    width: 240px;
+    width: 15.7%;
     background: linear-gradient(80deg, #251838, #372453);
     text-align: left;
     padding: 30px 30px;
     height: 100vw;
     position: fixed;
+    z-index: 10;
 }
 h1{
     color: rgb(148, 238, 208);
@@ -66,11 +67,15 @@ i{
     background-color: #524861;
     margin: 55px 0;
 }
+.body-content {
+    position: relative;
+    overflow: hidden;
+}
 .header {
     background: linear-gradient(180deg, #694570, #221633);
-    position: relative;
-    width: calc(100% - 240px);
-    margin-left: 240px;
+    /* position: relative; */
+    /* width: calc(100% - 15.7%); */
+    /* padding-left: 15.7%; */
     border-left: transparent solid 0.3px;
 }
 .header_item {
@@ -81,6 +86,7 @@ i{
 .left_items {
     margin: auto 30px;
     display: flex;
+    padding-left: 15.7%;
 }
 .left_items i {
     font-weight: 300;
@@ -170,6 +176,7 @@ a{
 .Avt {
     text-align: center;
     margin: 30px 0;
+    padding-left: 15.7%;
     padding-bottom: 50px;
 }
 .Avt img {
@@ -178,8 +185,7 @@ a{
     margin-bottom: 20px;
 }
 .content {
-    width: calc(100% - 240px);
-    margin-left: 240px;
+ /*   padding-left: 15.7%; */
     border-left: transparent solid 0.3px;
 }
 .contain-choice {
@@ -188,6 +194,7 @@ a{
 .Choice {
     align-items: center;
     display: flex;
+    padding-left: 15.7%;
 }
 .Choice ul {
     display: flex;
@@ -221,12 +228,16 @@ a{
     font-weight: 300;
     font-size: 20px;
 }
+#baihat {
+    padding-left: 15.7%;
+}
 #baihat h2{
     transition: transform 1.5s;
     cursor: pointer;
+    transform: translateX(-30px);
 }
 #baihat h2:hover{
-    transform: translateX(30%);
+    transform: translateX(20%);
     color: rgb(57, 243, 166);
 }
 .function {
@@ -261,12 +272,14 @@ a{
 }
 .left-list-row {
     display: flex; 
+    position: relative;
+    flex-basis: 90%;
 }
 .right-list-row {
     display: flex;
     margin: auto 7px;
+    flex-basis: 10%;
 }
-
 .list-row i{
     cursor: pointer;
 }
@@ -301,14 +314,11 @@ a{
 }
 
 .time {
-    margin: auto 0 auto 300px;
+    right: 40%;
+    position: absolute;
+    margin: 19px 0;
 }
-#ld-time { margin-left: 364px;}
-#fi-time {margin-left: 397px;}
-#hh-time {margin-left: 373px;}
-#bl-time {margin-left: 397px;}
-#iy-time {margin-left: 396px;}
-#ls-time {margin-left: 397px;}
+
 .btn{
     background-color: transparent;
     color: #fff;
@@ -329,7 +339,7 @@ a{
 
 /* nghesi */
 .introduce {
-    margin: 50px 0;
+    margin: 50px 0 50px 18%;
 }
 .img-intro img {
     width: 300px;
@@ -341,7 +351,6 @@ a{
     transform-origin: left top;
 }
 #img1-intro:hover {
-    /* transform: scale(1.02) rotateX(180deg); */
     transform: rotate(360deg) translate(-15%, 25%) scale(0.6);
 }
 #img2-intro {
@@ -381,6 +390,7 @@ a{
     background-color: #431f58;
     align-items: center;
     border-radius: 15px;
+    margin-left: 21%;
 }
 .music_info {
     display: flex;
